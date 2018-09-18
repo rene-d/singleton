@@ -2,8 +2,9 @@
 #include <iostream>
 using namespace std;
 
-extern const char * a1();
-extern const char * a2();
+extern const char *a1();
+extern const char *a2();
+extern int init_a2;
 
 int main_use = 0;
 
@@ -13,9 +14,13 @@ int main(int argc, char *argv[])
     cout << __FUNCTION__ << endl;
 
     cout << "appel " << a1() << endl;
-#ifdef USE_A2
+#ifdef USE_FUNC_A2
     // appelle une fonction du fichier a2.cpp
     cout << "appel " << a2() << endl;
+#endif
+#ifdef USE_VAR_A2
+    // sollicite une variable du fichier a2.cpp
+    init_a2 = 0;
 #endif
     cout << "main_use " << main_use << endl;
 

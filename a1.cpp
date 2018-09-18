@@ -4,7 +4,10 @@
 using namespace std;
 
 
-const char * a1()
+int internal_use = 0;
+
+const char *a1()
 {
+    ++internal_use;
     return __FUNCTION__;
 }

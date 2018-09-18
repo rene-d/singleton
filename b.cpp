@@ -6,7 +6,7 @@ using namespace std;
 
 static const char *dummy = "EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEERENE";
 
-const char * b()
+const char *b()
 {
     return dummy;
 }
