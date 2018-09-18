@@ -1,0 +1,8 @@
+os: linux
+
+dist: trusty
+
+script:
+  - ctest --build-and-test . build --build-generator "Unix Makefiles" --build-options -DCMAKE_BUILD_TYPE=Release
+  - strip build*/z*
+  - stat -f "%10z %N" build/z*
