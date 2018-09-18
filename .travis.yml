@@ -17,12 +17,9 @@ before_install:
   - export CC CXX
 
 script:
-  - mkdir toto
-  - cd toto
-  - cmake ..
+  - mkdir build
+  - cd build
+  - cmake  -DCMAKE_BUILD_TYPE=Release ..
   - make
+  - strip z*
   - ls -l
-  - cd ..
-  - ctest --build-and-test . build --build-generator "Unix Makefiles" --build-options -DCMAKE_BUILD_TYPE=Release
-  - strip build*/z*
-  - stat -f "%10z %N" build/z*
