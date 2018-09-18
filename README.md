@@ -1,5 +1,7 @@
 # singleton
 
+[![Build Status](https://travis-ci.org/rene-d/singleton.svg?branch=master)](https://travis-ci.org/rene-d/singleton)
+
 Exemples et différentes techniques pour forcer l'initialiser d'un [singleton](https://en.wikipedia.org/wiki/Singleton_pattern) C++ dans une librairie.
 
 1. démonstration de la "perte" du singleton

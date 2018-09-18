@@ -2,7 +2,27 @@ os: linux
 
 dist: trusty
 
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-7
+
+env:
+  - MATRIX_EVAL="CC=gcc-7 && CXX=g++-7"
+
+before_install:
+  - eval "${MATRIX_EVAL}"
+  - export CC CXX
+
 script:
+  - mkdir toto
+  - cd toto
+  - cmake ..
+  - make
+  - ls -l
+  - cd ..
   - ctest --build-and-test . build --build-generator "Unix Makefiles" --build-options -DCMAKE_BUILD_TYPE=Release
   - strip build*/z*
   - stat -f "%10z %N" build/z*
