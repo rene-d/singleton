@@ -34,10 +34,11 @@ add_test(NAME z1 COMMAND $<TARGET_FILE:z1> 0)
 #
 # solution avec -all_load
 #
-add_executable(z2 z.cpp)
-target_link_libraries(z2 PRIVATE b)
-set_target_properties(z2 PROPERTIES LINK_FLAGS -all_load)
-add_test(NAME z2 COMMAND $<TARGET_FILE:z2> 1)
+# add_executable(z2 z.cpp)
+# target_link_libraries(z2 PRIVATE b)
+# set_target_properties(z2 PROPERTIES LINK_FLAGS -all_load)
+# TODO: utiliser -Wl,--whole-archive XXX -Wl,--no-whole-archive
+# add_test(NAME z2 COMMAND $<TARGET_FILE:z2> 1)
 
 #
 # solution avec target de Object Library
