@@ -4,7 +4,7 @@ cmake_minimum_required(VERSION 3.5)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 #set(CMAKE_VERBOSE_MAKEFILE ON)
 
-add_compile_options(-flto)
+add_compile_options(-flto -Wall -Wextra)
 #add_compile_options(-fvisibility=hidden -fvisibility-inlines-hidden)
 
 set(CMAKE_CXX_STANDARD 14)

@@ -22,6 +22,8 @@ int main(int argc, char *argv[])
     // sollicite une variable du fichier a2.cpp
     init_a2 = 0;
 #endif
+
+    // affiche 0 si on n'est pas initialisé le singleton de a2.cpp
     cout << "main_use " << main_use << endl;
 
     if (argc < 2)

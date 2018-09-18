@@ -1,6 +1,6 @@
 # singleton
 
-Exemples et différentes techniques pour initialiser un [singleton](https://en.wikipedia.org/wiki/Singleton_pattern) C++ dans une librairie.
+Exemples et différentes techniques pour forcer l'initialiser d'un [singleton](https://en.wikipedia.org/wiki/Singleton_pattern) C++ dans une librairie.
 
 1. démonstration de la "perte" du singleton
 2. on charge tous les symboles dans l'exécutable
