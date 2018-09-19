@@ -3,6 +3,7 @@
 #include <iostream>
 using namespace std;
 
+// un fichier contenant une fonction utilisée
 
 int internal_use = 0;
 
