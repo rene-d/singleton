@@ -24,7 +24,4 @@ script:
   - ctest -V
   - strip z*
   - ls -l
-  - gcov z1.cpp
-
-after_success:
-- bash <(curl -s https://codecov.io/bash)
+  
